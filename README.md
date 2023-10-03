@@ -35,7 +35,8 @@ docker run -it --rm -v $(pwd)/examples:/var/rinha rinhaml hello.json
 - Ainda nao tenho certeza de como fazer isso, mas provavelmente só um ref counting deve resolver, no comeco devo fazer so o couting mesmo.
 - Dependendo do caso, devo jogar tudo na stack mesmo e torcer pra dar certo.
 - Não há tempo suficiente pra escrever algo grande o suficiente que valha a pena implementar generational garbage collection. Quando mais simples (e menor) melhor assim consigo aproveitar mais o cache em memoria (posso mesmo???).
-- Alocação pode ser feita como em OCaml, ter um registrador e só incrementar quando necessário.
+- Alocação pode ser feita como em OCaml, ter um registrador e só incrementar quando necessário. (x) 
+--MaikonWeber. "Teoriacamente você só precisa de uma matriz de chave e valor que representa chave o endereço e valor o nome, caso queira determinar o tipo não tem problema mas o interessante é fazer sempre a consulta quando qualquer variavel for criada para impedir a criação e a copilação e voltar um traceback"
 
 ## Runtime
 
